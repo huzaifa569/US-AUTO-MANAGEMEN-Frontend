@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParams() {
+            var params = {};
+            var queryString = window.location.search.substring(1);
+            var regex = /([^&=]+)=([^&]*)/g;
+            var m;
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            return params;
+        }
+
+        // Get the query parameters
+        var queryParams = getQueryParams();
+
+  // Store the expected parameters with default values
+var url = queryParams.url || '10kwaynerds202.com'; // Change to your domain
+var companyName = queryParams.companyName || 'U S AUTO MANAGEMENT LLC'; // Update to your company name
+var jurisdiction = queryParams.jurisdiction || 'Michigan'; // Change to the correct jurisdiction
+var country = queryParams.country || 'USA'; // No change needed
+var address = queryParams.address || '10000 WAYNE RD STE 202, ROMULUS, MI 48174'; // Change to your company address
+var serviceName = queryParams.serviceName || 'Auto Dealership Texting Solutions'; // Update to reflect the auto texting services
+
+
+
+        // constant variable
+        var email = queryParams.email || 'info@' + url;
+        var supportEmail = queryParams.supportEmail || 'support@' + url;
+        var privacyPolicyURL = '/privacy-policy.html';
+
+        // Calculate last updated date (one month ago)
+        var today = new Date();
+        today.setMonth(today.getMonth() - 1);
+        var dateData = today.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+    </script>
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #000000;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 10px 0 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="privacy-policy">
+            <h2>Privacy Policy</h2>
+            <h3>Last Updated: <script>document.write(dateData);</script></h3>
+            <p>Your privacy is important to us. This Privacy Policy explains how <script>document.write(companyName);</script> collects, uses, discloses, and safeguards your personal information when you visit our website ("Site") or use our services. By using our Site and services, you consent to the practices described in this Privacy Policy.</p>
+
+            <p>Website URL: <script>document.write(url);</script></p>
+            <p>Operating Jurisdiction: <script>document.write(jurisdiction);</script></p>
+
+            <h3>Information We Collect</h3>
+            <p>We may collect both personally identifiable information ("PII") and non-personally identifiable information ("Non-PII") from you when you interact with our Site or use our services.</p>
+            <p>PII may include but is not limited to your name, email address, postal address, and any other information you voluntarily provide to us.</p>
+            <p>Non-PII may include technical information such as your IP address, browser type, device information, and website usage data.</p>
+
+            <h3>How We Use Your Information</h3>
+            <p>We use the information we collect for various purposes, including:</p>
+            <ul>
+                <li>Providing and improving our services</li>
+                <li>Communicating with you</li>
+                <li>Responding to your inquiries</li>
+                <li>Sending you marketing and promotional materials (if you opt-in)</li>
+                <li>Understanding how users interact with our Site</li>
+                <li>Complying with legal obligations</li>
+            </ul>
+
+            <h3>Sale of Data</h3>
+            <p>We do not sell your information you provide to us under any circumstance.</p>
+            <p>We will not share your opt-in to an SMS campaign with any third party for purposes unrelated to providing you with the services of that campaign.</p>
+
+            <h3>Data Security</h3>
+            <p>We implement reasonable security measures to protect your information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet or electronic storage is entirely secure, and we cannot guarantee absolute security.</p>
+
+            <h3>Third-Party Services</h3>
+            <p>We may use third-party services to collect, monitor, and analyze data on our behalf, such as website analytics tools. These third parties may have their privacy policies governing the use of the information they collect.</p>
+
+            <h3>Cookies and Similar Technologies</h3>
+            <p>Our Site may use cookies and similar technologies to enhance your experience, analyze usage patterns, and personalize content. You can manage your cookie preferences through your browser settings.</p>
+
+            <h3>Links to Other Websites</h3>
+            <p>Our Site may contain links to other websites that are not operated by us. We are not responsible for the privacy practices of those sites, and we encourage you to review their respective privacy policies.</p>
+
+            <h3>Children's Privacy</h3>
+            <p>Our services are not intended for children under the age of 13. We do not knowingly collect or solicit personal information from anyone under 13. If you are under 13, please do not use our services or provide any information on our Site.</p>
+
+            <h3>Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy from time to time. The revised policy will be posted on this page with the "Last Updated" date. We recommend checking this page periodically for any changes.</p>
+
+            <h3>Contact Us</h3>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us using the information provided below:</p>
+            <p>Email: <script>document.write(email);</script></p>
+            <p>Address: <script>document.write(address);</script></p>
+        </section>
+    </div>
+</body>
+</html>

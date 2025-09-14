@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #000000;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function getQueryParams() {
+            var params = {};
+            var queryString = window.location.search.substring(1);
+            var regex = /([^&=]+)=([^&]*)/g;
+            var m;
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            return params;
+        }        
+
+        var queryParams = getQueryParams();
+// Store the expected parameters with default values
+var url = queryParams.url || '10kwaynerds202.com'; // Change to your domain
+var companyName = queryParams.companyName || 'U S AUTO MANAGEMENT LLC'; // Update to your company name
+var jurisdiction = queryParams.jurisdiction || 'Michigan'; // Change to the correct jurisdiction
+var country = queryParams.country || 'USA'; // No change needed
+var address = queryParams.address || '10000 WAYNE RD STE 202, ROMULUS, MI 48174'; // Change to your company address
+var serviceName = queryParams.serviceName || 'Auto Dealership Texting Solutions'; // Update to reflect the auto texting services
+
+        var email = queryParams.email || 'info@' + url;
+        var supportEmail = queryParams.supportEmail || 'support@' + url;
+        var privacyPolicyURL = '/privacy-policy.html';
+
+
+        var today = new Date();
+        today.setMonth(today.getMonth() - 1);
+        var dateData = today.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <section id="privacy-policy">
+                            <h1>Terms and Conditions</h1>
+                <p>Last Updated: <script>document.write(dateData);</script></p>
+                
+                <h2>1. Introduction</h2>
+                <p>Welcome to <script>document.write(companyName);</script>. These Terms and Conditions govern your use of our services, including <script>document.write(serviceName);</script>. By accessing our website, you agree to be bound by these terms.</p>
+                
+                <h2>2. Company Information</h2>
+                <p><script>document.write(companyName);</script> is registered in <script>document.write(jurisdiction);</script>, <script>document.write(country);</script>. Our registered office is at <script>document.write(address);</script>.</p>
+                
+                <h2>3. Services</h2>
+                <p>We provide <script>document.write(serviceName);</script>. The scope and availability of services are subject to change at our discretion.</p>
+                
+                <h2>4. Privacy Policy</h2>
+                <p>(a) Our <a href="/privacy-policy.html">Privacy Policy</a> outlines how we collect, use, and protect your personal information. By using our website, you consent to our Privacy Policy.</p>
+                
+                <h2>5. Governing Law</h2>
+                <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of <script>document.write(jurisdiction);</script>, <script>document.write(country);</script>.</p>
+                
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions or concerns about these Terms and Conditions, please contact us at 
+                    <script>document.write(email);</script> or support at <script>document.write(supportEmail);</script>.</p>
+                <p>Company Address: <script>document.write(address);</script></p>
+            
+        </section>
+    </div>
+</body>
+</html>
